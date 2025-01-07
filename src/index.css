@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
-
+:root {
+  --random-bg: url('/assets/village-2090495_1920.jpg'); /* Set a fallback background */
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +10,6 @@
   
   body {
     font-family: 'Outfit', sans-serif;
-   
   }
   p {
     font-size: 1.6rem;
@@ -24,14 +25,14 @@
     color: white;
   }
   .app:before {
-    content: '';
-    background: url('./assets/village-2090495_1920.jpg') 
-    no-repeat center center/cover;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
+  content: '';
+  background: var(--random-bg) no-repeat center center/cover;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
   .app .search {
     text-align: center;
     padding: 1rem;
@@ -101,3 +102,30 @@
       padding-top: 6%;
     }
   }
+  .suggestions-dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 10;
+    color: black;
+    transform: translateY(20px);
+    margin: auto;
+  }
+  
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover,
+  .suggestion-item.selected {
+    background-color: #ddd;
+  }
+  
