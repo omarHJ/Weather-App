@@ -1,10 +1,13 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import village from '../src/assets/village-2090495_1920.jpg'
-import nature from '../src/assets/nature-1959229_1920.jpg'
-import pexels from '../src/assets/pexels-jplenio-3473659.jpg'
-import sunrise from '../src/assets/sunrise-1959227_1920.jpg'
+import village from '../src/assets/village-2090495_1920.jpg';
+import nature from '../src/assets/nature-1959229_1920.jpg';
+import pexels from '../src/assets/pexels-jplenio-3473659.jpg';
+import sunrise from '../src/assets/sunrise-1959227_1920.jpg';
+import forest from '../src/assets/forest-3776796_1920.jpg';
+import Aurora from '../src/assets/Aurora_4K_3840x2160.jpg';
+import clouds from '../src/assets/clouds_4K_3840x2160.jpg';
 
 
 const App = () => {
@@ -19,7 +22,9 @@ const backgroundImages = [
   nature,
   pexels,
   sunrise,
-  village
+  forest,
+  Aurora,
+  clouds
 ];
   const getRandomBackground = () => {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length);
